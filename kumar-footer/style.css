@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.footer {
+  background-color: #274182;
+  color: #ffffff;
+  padding: 50px 60px 30px;
+}
+
+
+.footer-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 260px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  padding: 8px 16px;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.logo-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #274182;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+
+.footer-tagline {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+}
+
+
+.linkedin-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #1da8b8;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.linkedin-btn:hover {
+  background-color: #179aaa;
+  transform: scale(1.08);
+}
+
+
+.footer-spacer {
+  flex: 1;
+}
+
+
+.footer-links {
+  min-width: 140px;
+}
+
+.links-heading {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #ffffff;
+  margin-bottom: 18px;
+}
+
+.footer-links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #ffffff;
+}
+
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 40px 0 24px;
+}
+
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-copy {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-legal {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.footer-legal a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 12.5px;
+  transition: color 0.2s ease;
+}
+
+.footer-legal a:hover {
+  color: #ffffff;
+}
+
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 24px 24px;
+  }
+
+  .footer-main {
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .footer-spacer {
+    display: none;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .footer-legal {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+}
