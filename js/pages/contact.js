@@ -44,3 +44,23 @@ if (copyEl) {
   const currentYear = new Date().getFullYear();
   copyEl.innerHTML = copyEl.innerHTML.replace('2024', currentYear);
 }
+
+// contact form
+
+const contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const fullName = document.getElementById("fullName").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if (!fullName || !email || !message) {
+    alert("Please fill in all required fields.");
+    return;
+  }
+
+  alert("Inquiry submitted successfully!");
+  contactForm.reset();
+});
