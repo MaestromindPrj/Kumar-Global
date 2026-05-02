@@ -48,19 +48,41 @@ if (copyEl) {
 // contact form
 
 const contactForm = document.getElementById("contactForm");
+const formStatus = document.getElementById("formStatus");
 
-contactForm.addEventListener("submit", function (e) {
+const scriptURL = "https://script.google.com/macros/s/AKfycbxLjaoefupihBPQBGdo6RIacYW2nS1RHoyMrFavbiR22F-dvNI1A5jokLYH42RDB2F9og/exec";
+
+contactForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const fullName = document.getElementById("fullName").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
+  const formData = {
+    fullName: document.getElementById("fullName").value,
+    companyName: document.getElementById("companyName").value,
+    phone: document.getElementById("phone").value,
+    email: document.getElementById("email").value,
+    requirement: document.getElementById("requirement").value,
+    message: document.getElementById("message").value
+  };
 
-  if (!fullName || !email || !message) {
-    alert("Please fill in all required fields.");
-    return;
+  try {
+    const response = await fetch(scriptURL, {
+      method: "POST",
+      body: JSON.stringify(formData)
+    });
+
+    const result = await response.json();
+
+    if (result.result === "success") {
+      formStatus.textContent = "Inquiry submitted successfully!";
+      formStatus.style.color = "green";
+      contactForm.reset();
+    } else {
+      formStatus.textContent = "Submission failed.";
+      formStatus.style.color = "red";
+    }
+
+  } catch (error) {
+    formStatus.textContent = "Network error.";
+    formStatus.style.color = "red";
   }
-
-  alert("Inquiry submitted successfully!");
-  contactForm.reset();
 });

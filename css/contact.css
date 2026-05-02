@@ -381,6 +381,10 @@ body {
   font-weight: 600;
 }
 
+.linkedin-button:hover {
+  background-color: #1b295233;
+}
+
 .linkedin {
  display: flex;
   align-items: center;
@@ -457,6 +461,12 @@ body {
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
+}
+
+.contact-form-button:hover {
+  background: #1b29521a;
+  color: #274182;
+  border: 1px solid #274182;
 }
 
 /* location map */
