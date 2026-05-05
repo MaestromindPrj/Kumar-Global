@@ -4,10 +4,8 @@
   box-sizing: border-box;
 }
 
-body {
-font-family: 'Inter', sans-serif; 
-  background: #F7F9FB;
-}
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; }
 
 .navbar {
   display: flex;
@@ -376,6 +374,8 @@ font-family: 'Inter', sans-serif;
 .hero-content {
   max-width: 950px;
   color: #ffffff;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
 }
 
 .hero-label {
@@ -383,6 +383,7 @@ font-family: 'Inter', sans-serif;
   font-weight: 600;
   letter-spacing: 1.4px;
   margin-bottom: 8px;
+  animation-delay: 0.2s;
 }
 
 .hero-title {
@@ -390,11 +391,29 @@ font-family: 'Inter', sans-serif;
   font-weight: 700;
   line-height: 0.9;
   margin-bottom: 24px;
+  animation-delay: 0.4s;
 }
 
 .hero-description {
   font-size: 18px;
   line-height: 1.5;
+  animation-delay: 0.6s;
+}
+
+.hero-label, .hero-title, .hero-description {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Services List */
@@ -430,8 +449,23 @@ font-family: 'Inter', sans-serif;
   background-color: #ffffff;
   border: 1px solid #e3e8f0;
   padding: 2rem;
+  opacity: 0;
+  animation: fadeUp linear both;
+  animation-timeline: view();
+  animation-range: entry 15% cover 30%;
 }
 
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .service-card-title {
   font-size: 20px;
   font-weight: 600;
@@ -497,6 +531,10 @@ font-family: 'Inter', sans-serif;
   flex: 1;
   position: relative;
   z-index: 1;
+  opacity: 0;
+  animation: fadeUp linear both;
+  animation-timeline: view();
+  animation-range: entry 15% cover 30%;
 }
 
 .process-icon {
@@ -506,6 +544,19 @@ font-family: 'Inter', sans-serif;
   margin: 0 auto 1rem;
   display: grid;
   place-items: center;
+  animation: iconPop 0.6s ease forwards;
+}
+
+@keyframes iconPop {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .process-content h3 {
@@ -533,6 +584,22 @@ font-family: 'Inter', sans-serif;
   color: #ffffff;
   line-height: 1;
   margin-bottom: 48px;
+  opacity: 0;
+  animation: fadeScale linear both;
+  animation-timeline: view();
+  animation-range: entry 25% cover 40%;
+}
+
+@keyframes fadeScale {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .cta-button {
@@ -579,6 +646,11 @@ font-family: 'Inter', sans-serif;
     max-width: 100%;
   }
 
+  .service-heading {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
   /* process flow */
   .process {
     text-align: left;
@@ -586,6 +658,11 @@ font-family: 'Inter', sans-serif;
 
   .process-heading, .process-label {
     text-align: center;
+  }
+
+  .process-heading {
+    font-size: 36px;
+    margin-bottom: 40px;
   }
 
   .process-flow {
@@ -616,6 +693,9 @@ font-family: 'Inter', sans-serif;
     padding: 60px 20px;
   }
 
+  .cta-title {
+    font-size: 36px;
+  }
   .cta-button {
     width: 100%;
     max-width: 250px;
@@ -634,6 +714,13 @@ font-family: 'Inter', sans-serif;
 }
 
 
-
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
 
 

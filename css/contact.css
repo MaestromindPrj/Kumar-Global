@@ -4,10 +4,8 @@
   box-sizing: border-box;
 }
 
-body {
-   font-family: 'Inter', sans-serif; 
-  background: #F7F9FB;
-}
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; }
 
 .navbar {
   display: flex;
@@ -376,7 +374,9 @@ body {
 
 .contact-hero-content {
     max-width: 850px;
-    margin: 0 auto;   
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;   
 }
 
 .contact-hero-title {
@@ -384,6 +384,7 @@ body {
     font-weight: 700;
     line-height: 1;
     margin-bottom: 16px;
+    animation-delay: 0.2s;
 }
 
 .contact-hero-description {
@@ -391,6 +392,22 @@ body {
     line-height: 1.4;
     margin: 0 auto;
     color: #F1F5F9;
+    animation-delay: 0.4s;
+}
+
+.contact-hero-title, .contact-hero-description {
+    animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* contact-section */
