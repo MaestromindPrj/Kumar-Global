@@ -47,9 +47,11 @@ body { font-family: 'Inter', sans-serif; }
 }
 
 .logo-text {
-  font-size: 17px;
+  font-size: 20px;
+  font-family: "Old English Text MT Std", "Old English Text MT", serif;
+
   font-weight: 600;
-  color: #274182;
+  color: #2C83BA;
   letter-spacing: 0.3px;
   white-space: nowrap;
 }
@@ -221,7 +223,7 @@ body { font-family: 'Inter', sans-serif; }
 .logo-text {
   font-size: 16px;
   font-weight: 600;
-  color: #274182;
+  color: #2C83BA;
   letter-spacing: 0.3px;
   white-space: nowrap;
 }
