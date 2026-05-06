@@ -905,6 +905,13 @@ h2.procurement-title,
   .ops-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .ops-grid .item-1, 
+  .ops-grid .item-2, 
+  .ops-grid .item-3, 
+  .ops-grid .item-4, 
+  .ops-grid .item-5 {
+    grid-column: auto;
+  }
   .procurement-section {
     flex-direction: column;
   }
@@ -942,6 +949,13 @@ h2.procurement-title,
   .ops-grid {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+  .ops-grid .item-1, 
+  .ops-grid .item-2, 
+  .ops-grid .item-3, 
+  .ops-grid .item-4, 
+  .ops-grid .item-5 {
+    grid-column: auto;
   }
   
   .procurement-left {
@@ -983,9 +997,9 @@ h2.procurement-title,
   }
   
   .ops-item {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
   }
   
   .strength-item {
