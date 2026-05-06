@@ -30,7 +30,7 @@ body { font-family: 'Inter', sans-serif; }
 }
 
 .logo-img {
-  height: 40px;  
+  height: 60px;  
   width: auto;
   object-fit: contain;
 }
@@ -41,14 +41,7 @@ body { font-family: 'Inter', sans-serif; }
   justify-content: center;
 }
 
-.logo-text {
-  font-size: 20px;
-  font-family: "Old English Text MT Std", "Old English Text MT", serif;
-  font-weight: 600;
-  color: #2C83BA;
-  letter-spacing: 0.3px;
-  white-space: nowrap;
-}
+
 
 
 .nav-links {

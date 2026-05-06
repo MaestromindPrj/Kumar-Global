@@ -58,7 +58,7 @@ body {
 }
 
 .logo-img {
-  height: 40px;  
+  height: 60px;  
   width: auto;
   object-fit: contain;
 }
@@ -69,14 +69,7 @@ body {
   justify-content: center;
 }
 
-.logo-text {
-  font-size: 20px;
-  font-family: "Old English Text MT Std", "Old English Text MT", serif;
-  font-weight: 600;
-  color: var(--blue-accent);
-  letter-spacing: 0.3px;
-  white-space: nowrap;
-}
+
 
 
 .nav-links {
@@ -242,13 +235,7 @@ body {
   width: fit-content;
 }
 
-.logo-text {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--blue-accent);
-  letter-spacing: 0.3px;
-  white-space: nowrap;
-}
+
 
 
 .footer-tagline {
