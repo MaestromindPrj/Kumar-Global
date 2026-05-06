@@ -207,14 +207,6 @@ body { font-family: 'Inter', sans-serif; }
   width: fit-content;
 }
 
-.logo-text {
-  font-size: 16px;
-  font-weight: 600;
-  color: #2C83BA;
-  letter-spacing: 0.3px;
-  white-space: nowrap;
-}
-
 
 .footer-tagline {
   font-size: 13.5px;
@@ -749,11 +741,24 @@ h2.procurement-title,
 
 .ops-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 28px 56px;
   max-width: 960px;
   margin: 0 auto;
 }
+
+.item-1, .item-2, .item-3 {
+  grid-column: span 2;
+}
+
+
+.item-4{
+  grid-column:2 / span 2;
+}
+.item-5 {
+  grid-column: span 2;
+}
+
 
 .ops-item {
   display: flex;
