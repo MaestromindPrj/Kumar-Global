@@ -656,33 +656,9 @@ h2.procurement-title,
   display: block;
 }
 
-.exp-badge {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background: #274182;
-  color: #ffffff;
-  padding: 22px 30px;
-  text-align: center;
-  line-height: 1;
-}
 
-.exp-num {
-  display: block;
-  font-size: 38px;
-  font-weight: 800;
-  letter-spacing: -1px;
-  margin-bottom: 6px;
-}
 
-.exp-text {
-  font-size: 11px;
-  font-weight: 400;
-  letter-spacing: 1.2px;
-  opacity: 0.9;
-  line-height: 1.5;
-  text-transform: uppercase;
-}
+
 
 .procurement-right {
   flex: 1;
@@ -711,8 +687,8 @@ h2.procurement-title,
 }
 
 .phase-dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: #274182;
   flex-shrink: 0;

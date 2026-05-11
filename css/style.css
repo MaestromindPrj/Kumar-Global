@@ -577,12 +577,6 @@ img { display: block; max-width: 100%; }
   margin-bottom: 18px;
 }
 
-.leader-divider {
-  width: 40px;
-  height: 3px;
-  background: var(--navy);
-  margin-bottom: 22px;
-}
 
 .leader-content p {
   font-size: 15px;
